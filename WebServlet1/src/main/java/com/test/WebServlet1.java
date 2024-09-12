@@ -14,7 +14,7 @@ public class WebServlet1 extends HttpServlet {
 		String lname = req.getParameter("lname");
 
 		try {
-			res.getWriter().append("Good morning, " + fname + " " + lname + "!");
+			res.getWriter().append("Good morning, " + fname + " " + lname + "!").close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
