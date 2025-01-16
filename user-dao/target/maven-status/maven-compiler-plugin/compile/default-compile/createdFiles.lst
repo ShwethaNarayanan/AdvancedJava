@@ -1,0 +1,4 @@
+com\apex\user\util\HibernateUtil.class
+com\apex\user\vo\User.class
+com\apex\user\client\UserClient.class
+com\apex\user\dao\UserDAO.class
