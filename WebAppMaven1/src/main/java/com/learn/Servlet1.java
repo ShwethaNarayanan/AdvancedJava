@@ -20,7 +20,7 @@ public class Servlet1 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advjava", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://mysql:3306/advjava", "root", "root");
 			Statement stmt = con.createStatement();
 			stmt.executeUpdate("INSERT INTO PERSON VALUES (6,'Roy','Rima', 'Kolkata')");
 			response.getWriter().append("Record successfully added to Person table!");

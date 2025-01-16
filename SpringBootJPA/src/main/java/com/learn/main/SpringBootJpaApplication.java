@@ -20,9 +20,9 @@ public class SpringBootJpaApplication {
 		
 		// ----------------------- Insert ---------------------------------------------------
 		Students std = new Students();
-		std.setName("Soni");
-		std.setRollno(19);
-		std.setMarks(85F);
+		std.setName("Shagun");
+		std.setRollno(23);
+		std.setMarks(90F);
 		boolean status;
 		status = stdService.saveStudent(std);
 		if(status == true)
@@ -52,7 +52,7 @@ public class SpringBootJpaApplication {
 				
 	  //----------------------------- Delete by ID ---------------------------------------------
 				
-				status = stdService.deleteStudent(3);
+				status = stdService.deleteStudent(4);
 				if(status == true)
 					System.out.println("Student data deleted successfully!");
 				else

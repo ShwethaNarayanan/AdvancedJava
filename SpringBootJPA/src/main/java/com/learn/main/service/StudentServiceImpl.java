@@ -5,17 +5,20 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.learn.main.entities.Students;
 import com.learn.main.repositoy.StudentRepository;
 
 @Service
+@Transactional
 public class StudentServiceImpl implements StudentService {
 
 	@Autowired
 	private StudentRepository stdRepo;
 
 	@Override
+	@Transactional
 	public boolean saveStudent(Students std) {
 
 		boolean status;
@@ -24,12 +27,13 @@ public class StudentServiceImpl implements StudentService {
 			status = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			return false;
+			status = false;
 		}
 		return status;
 	}
 
 	@Override
+	@Transactional
 	public Students find(int id) {
 		Optional<Students> optional = stdRepo.findById(id);
 		if (!optional.isEmpty()) {
@@ -39,12 +43,14 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
+	@Transactional
 	public List<Students> findAll() {
 		List<Students> std_list = stdRepo.findAll();
 		return std_list;
 	}
 
 	@Override
+	@Transactional
 	public boolean updateStudent(int id, float marks) {
 		// First find the record so that the other field values do not get null while
 		// updating a value
@@ -58,6 +64,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
+	@Transactional
 	public boolean deleteStudent(int id) {
 
 		try {
