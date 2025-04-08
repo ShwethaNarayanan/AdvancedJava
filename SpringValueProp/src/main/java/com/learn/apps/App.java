@@ -10,7 +10,7 @@ import com.learn.resources.AppContext;
 public class App {
 
 	public static void main(String[] args) {
-		
+		// Git
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppContext.class);
     	Writer writer = (Writer) context.getBean("writer");
         writer.write();
