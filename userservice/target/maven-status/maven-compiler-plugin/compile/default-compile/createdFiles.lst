@@ -1,0 +1,6 @@
+com\service\vo\UserVO.class
+com\service\bo\UserBOImpl.class
+com\service\config\AppConfig.class
+com\service\controller\UserRestController.class
+com\service\bo\UserBO.class
+com\service\config\WebAppConfig.class

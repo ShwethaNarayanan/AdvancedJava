@@ -1,0 +1,5 @@
+com\apex\user\bo\UserBOImpl.class
+com\apex\user\vo\UserVO.class
+com\apex\user\bo\UserBO.class
+com\apex\user\controller\UserController.class
+com\apex\user\config\AppConfig.class
